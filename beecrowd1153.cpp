@@ -25,5 +25,5 @@ int main(){
     }
     cout << factorial << endl;
 
-    rer
+    return 0;
 }
