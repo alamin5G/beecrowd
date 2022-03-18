@@ -35,5 +35,13 @@ int main()
         count++;
     }
 
+    //or you can just use this code for same output.
+    //before copy paste, remember that, either you use this code nor neither
+    // you use above code -- same output/
+    for(int i = 1; i <= x; i++){
+            cout << i << " " << i*i << " " << i*i*i << endl;
+    }
+
+
     return 0;
 }
