@@ -23,15 +23,15 @@ int main()
 
     if (arr[1] == H)
     {
-        printf("huguinho");
+        cout << "huguinho" << endl;
     }
     else if (arr[1] == L)
     {
-        printf("luisinho");
+        cout << "luisinho" << endl;
     }
     else if (arr[1] == Z)
     {
-        printf("zezinho");
+        cout << "zezinho" << endl;
     }
 
     return 0;
