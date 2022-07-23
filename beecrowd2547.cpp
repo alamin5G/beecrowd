@@ -13,10 +13,11 @@
 using namespace std;
 int main()
 {
-    int N, m, p, c = 0;
+    int N, m, p,c;
     while (cin >> N >> m >> p)
     {
         int a[N];
+        
         for (auto i = 0; i < N; i++)
         {
             cin >> a[i];
@@ -26,6 +27,7 @@ int main()
             }
         }
         cout << c << endl;
+        c=0;
     }
     return 0;
 }
