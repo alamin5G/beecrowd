@@ -15,9 +15,10 @@ int main()
 {
     int t;
     int n;
-    int s=0, l=0;
+    int s = 0, l = 0;
     vector<int> odd;
     vector<int> great;
+    vector<int> out;
     cin >> t;
     while (t--)
     {
@@ -27,53 +28,43 @@ int main()
         {
             cin >> v[i];
         }
-        for (auto i = 0; i < n; i++)
+        for (auto j = 0; j < n; j++)
         {
-            if (v.at(i) % 2 == 1)
+            if (v.at(j) % 2 == 1)
             {
-                odd.push_back(v.at(i));
+                odd.push_back(v.at(j));
             }
-        }
-        if(odd.empty()){
-            cout << endl;
-            continue;
         }
         sort(odd.begin(), odd.end());
         great = odd;
         sort(great.begin(), great.end(), greater<int>());
-        
+
         for (auto i = 0; i < odd.size(); i++)
         {
             if (i == 0)
             {
-                cout << great.at(i) << " ";
+                out.push_back(great.at(i));
             }
             else if (i % 2 != 0)
             {
-                if (i == odd.size() - 1)
-                {
-                    cout << odd.at(s) << endl;
-                }
-                else
-                {
-                    cout << odd.at(s) << " ";
-                }
+                out.push_back(odd.at(s));
                 s++;
             }
             else
             {
                 l++;
-                if (i == odd.size() - 1)
-                {
-                    cout << great.at(l) << endl;
-                }
-                else
-                {
-                    cout << great.at(l) << " ";
-                }
+                out.push_back(great.at(l));
             }
         }
-        s=0, l=0, v.clear(), odd.clear(), great.clear();
+        for(auto a =0; a<out.size(); a++){
+            if(a==out.size()-1){
+                cout << out[a];
+            }else{
+                cout << out[a] << " ";
+            }
+        }
+        cout << endl;
+        s = 0, l = 0, odd.clear(), great.clear(), out.clear();
     }
 
     return 0;
