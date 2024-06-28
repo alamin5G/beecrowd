@@ -48,4 +48,6 @@ public class Beecrowd1255 {
         }
         return ch;
     }
+
+
 }
